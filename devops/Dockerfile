@@ -1,4 +1,4 @@
-FROM java:11
+FROM openjdk:11
 WORKDIR /
 COPY target/student-0.0.1-SNAPSHOT.jar student.jar
 EXPOSE 8080

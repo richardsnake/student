@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ms-student
+  labels:
+    name: ms-student
+spec:
+  selector:
+    matchLabels:
+      name: ms-student
+  template:
+    metadata:
+      labels:
+        name: ms-student
+    spec:
+      containers:
+        - name: ms-student
+          image: upc/ms-student
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 8080
